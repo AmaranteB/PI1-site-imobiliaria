@@ -50,3 +50,53 @@
 
         // Inicializa o site com todos os imóveis
         renderProperties(properties);
+
+// Lógica de login
+
+const USER = "admin";
+const PASS = "1234";
+
+function login() {
+    const user = document.getElementById("user").value;
+    const pass = document.getElementById("pass").value;
+
+    if (user === USER && pass === PASS) {
+        localStorage.setItem("logado", "true");
+        document.getElementById("login-screen").style.display = "none";
+    } else {
+        document.getElementById("error").innerText = "Usuário ou senha inválidos";
+    }
+}
+
+// verifica ao abrir o site
+window.onload = function () {
+    if (localStorage.getItem("logado") === "true") {
+        document.getElementById("login-screen").style.display = "none";
+    }
+}
+
+// função para adicionar imóvel
+
+function addProperty() {
+
+    if (localStorage.getItem("logado") !== "true") {
+        alert("Você precisa estar logado!");
+        return;
+    }
+
+    const novo = {
+        id: document.getElementById("id").value,
+        title: document.getElementById("title").value,
+        price: document.getElementById("price").value,
+        specs: document.getElementById("specs").value,
+        location: document.getElementById("location").value,
+        type: document.getElementById("type").value,
+        image: document.getElementById("image").value
+    };
+
+    properties.push(novo);
+
+    renderProperties(properties);
+
+    alert("Imóvel adicionado com sucesso!");
+}
