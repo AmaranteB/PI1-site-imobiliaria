@@ -7,9 +7,9 @@
 
     <!-- Pacotes e links -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="dados.js"></script>
-    <script src="inteligencia.js"></script>
     <script src="bancode-dados-temporario.js"></script>
+    <script src="inteligencia.js"></script>
+    
     <style>
         /* Ajuste para o comportamento de scroll suave */
         html { scroll-behavior: smooth; }
@@ -19,22 +19,6 @@
 
 <body class="bg-gray-50 text-gray-800">
 
-<!-- Sistema de Login -->
-
-<div id="login-screen" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-    <div class="bg-white p-8 rounded-xl w-80 text-center">
-        <h2 class="text-xl font-bold mb-4">Login</h2>
-
-        <input id="user" type="text" placeholder="Usuário" class="w-full p-2 border mb-3 rounded">
-        <input id="pass" type="password" placeholder="Senha" class="w-full p-2 border mb-4 rounded">
-
-        <button onclick="login()" class="w-full bg-blue-600 text-white py-2 rounded">
-            Entrar
-        </button>
-
-        <p id="error" class="text-red-500 text-sm mt-2"></p>
-    </div>
-</div>
 
 <!-- menu de navegação -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
@@ -51,7 +35,15 @@
                 <a href="#catalogo" class="hover:text-blue-600">Imóveis</a>
                 <a href="#sobre" class="hover:text-blue-600">Sobre</a>
             </nav>
-            <a href="https://wa.me/5511999999999" class="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-md">WhatsApp</a>
+            
+            <!-- botão login e whatsapp -->
+            <div class="flex gap-2">
+                <a href="admin.html" class="bg-blue-600 text-white px-4 py-2 rounded-full font-bold text-sm shadow-md">
+                    Login
+                </a>
+
+            <a href="https://wa.me/5511999999999" class="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-md">WhatsApp        
+            </a>
         </div>
     </header>
 
@@ -127,26 +119,6 @@
     </div>
 </section>
 <br>
-
-<!-- formulário para novo imóvel -->
-
-<section id="admin" class="max-w-7xl mx-auto px-4 py-12">
-    <h2 class="text-2xl font-bold mb-6">Cadastrar novo imóvel</h2>
-
-    <div class="grid gap-3 max-w-md">
-        <input id="id" placeholder="Código (ex: AP-9999)" class="p-2 border rounded">
-        <input id="title" placeholder="Título" class="p-2 border rounded">
-        <input id="price" placeholder="Preço" class="p-2 border rounded">
-        <input id="specs" placeholder="Specs (ex: 2 dorms • 1 vaga • 60m²)" class="p-2 border rounded">
-        <input id="location" placeholder="Localização" class="p-2 border rounded">
-        <input id="type" placeholder="Tipo (Apartamento/Casa)" class="p-2 border rounded">
-        <input id="image" placeholder="URL da imagem" class="p-2 border rounded">
-
-        <button onclick="addProperty()" class="bg-green-500 text-white py-2 rounded">
-            Adicionar imóvel
-        </button>
-    </div>
-</section>
 
     <!-- section roda pé -->
     <footer class="bg-gray-900 text-white py-12 text-center">
