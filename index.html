@@ -7,9 +7,9 @@
 
     <!-- Pacotes e links -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="dados.js"></script>
-    <script src="inteligencia.js"></script>
     <script src="bancode-dados-temporario.js"></script>
+    <script src="inteligencia.js"></script>
+    
     <style>
         /* Ajuste para o comportamento de scroll suave */
         html { scroll-behavior: smooth; }
@@ -18,6 +18,7 @@
 </head>
 
 <body class="bg-gray-50 text-gray-800">
+
 
 <!-- menu de navegação -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
@@ -34,7 +35,15 @@
                 <a href="#catalogo" class="hover:text-blue-600">Imóveis</a>
                 <a href="#sobre" class="hover:text-blue-600">Sobre</a>
             </nav>
-            <a href="https://wa.me/5511999999999" class="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-md">WhatsApp</a>
+            
+            <!-- botão login e whatsapp -->
+            <div class="flex gap-2">
+                <a href="admin.html" class="bg-blue-600 text-white px-4 py-2 rounded-full font-bold text-sm shadow-md">
+                    Login
+                </a>
+
+            <a href="https://wa.me/5511999999999" class="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-md">WhatsApp        
+            </a>
         </div>
     </header>
 
@@ -110,6 +119,7 @@
     </div>
 </section>
 <br>
+
     <!-- section roda pé -->
     <footer class="bg-gray-900 text-white py-12 text-center">
         <p class="opacity-70">&copy; 2026 Imobiliária Novo Horizonte. Todos os direitos reservados.</p>
