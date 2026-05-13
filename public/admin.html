@@ -5,23 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel Admin - Imobiliária Novo Horizonte</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="bancode-dados-temporario.js" defer></script>
-    <script src="inteligencia.js" defer></script>
+    <script src="admin.js" defer></script>
 </head>
 
 <body class="bg-gray-100 text-gray-800">
 
-    <!-- Função bloquear o painel até o login-->
+    <!-- tela de login em página separada. 
+    bloquear o painel administrativo até o usuário digitar usuário e senha corretos. -->
+
     <section id="login-screen" class="min-h-screen flex items-center justify-center px-4">
         <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-sm">
             <h1 class="text-2xl font-bold text-center mb-2">Área Administrativa</h1>
             <p class="text-center text-gray-500 mb-6">Entre para gerenciar os imóveis</p>
 
             <label class="text-sm font-bold">Usuário</label>
-            <input id="loginUser" type="text" placeholder="Digite: admin" class="w-full p-3 border rounded-lg mb-4 mt-1">
+            <input id="loginUser" type="text" placeholder="Usuário" class="w-full p-3 border rounded-lg mb-4 mt-1">
 
             <label class="text-sm font-bold">Senha</label>
-            <input id="loginPass" type="password" placeholder="Digite: 1234" class="w-full p-3 border rounded-lg mb-4 mt-1">
+            <input id="loginPass" type="password" placeholder="Senha" class="w-full p-3 border rounded-lg mb-4 mt-1">
 
             <button onclick="login()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg">Entrar</button>
             <p id="loginError" class="text-red-500 text-sm text-center mt-3"></p>
@@ -29,8 +30,9 @@
             <a href="index.html" class="block text-center text-blue-600 mt-5 text-sm">Voltar ao site</a>
         </div>
     </section>
-    
-    <!-- Função Cadastrar, editar e excluir imóveis -->
+
+    <!--  painel administrativo separado da página principal. -->
+    <!-- funções CRUD. -->
     <main id="admin-panel" class="hidden">
         <header class="bg-white shadow-sm sticky top-0 z-50">
             <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
@@ -49,6 +51,7 @@
             <div class="bg-white rounded-2xl shadow-md p-6 lg:col-span-1">
                 <h2 id="formTitle" class="text-2xl font-bold mb-5">Cadastrar novo imóvel</h2>
 
+                <!-- campo oculto usado para saber se o formulário está cadastrando um novo imóvel ou editando um existente. -->
                 <input type="hidden" id="editingId">
 
                 <label class="text-sm font-bold">Código</label>
@@ -75,7 +78,10 @@
                 </select>
 
                 <label class="text-sm font-bold">Imagem</label>
-                <input id="image" placeholder="URL ou caminho da imagem" class="w-full p-3 border rounded-lg mb-5 mt-1">
+                <!--  pode enviar uma foto do computador. -->
+                <input id="imageFile" type="file" accept="image/*" class="w-full p-3 border rounded-lg mb-2 mt-1 bg-white">
+                <!--permite colar uma URL de imagem -->
+                <input id="image" placeholder="Ou cole uma URL/caminho da imagem" class="w-full p-3 border rounded-lg mb-5 mt-1">
 
                 <button onclick="savePropertyFromForm()" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg mb-3">Salvar imóvel</button>
                 <button onclick="clearForm()" class="w-full bg-gray-200 hover:bg-gray-300 font-bold py-3 rounded-lg">Limpar formulário</button>
@@ -86,6 +92,7 @@
                     <h2 class="text-2xl font-bold">Imóveis cadastrados</h2>
                     <p class="text-sm text-gray-500"><span id="admin-count">0</span> imóveis</p>
                 </div>
+                
                 <div id="admin-list" class="grid grid-cols-1 md:grid-cols-2 gap-5"></div>
             </div>
         </section>
