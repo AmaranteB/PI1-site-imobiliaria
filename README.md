@@ -1,50 +1,16 @@
-# Imobiliária Novo Horizonte - versão com backend
+# Imobiliária Novo Horizonte - versão final
 
-Este projeto transforma o site HTML/JS em uma aplicação de estudo com backend real.
-
-## O que mudou
-
-- O site público continua visualmente igual.
-- Os imóveis agora vêm de uma API (`/api/properties`).
-- O cadastro, edição e exclusão passam a gravar em banco SQLite.
-- O login não fica mais escrito no JavaScript do navegador.
-- A senha do administrador fica criptografada no banco com bcrypt.
-- O painel admin usa token JWT para acessar rotas protegidas.
-- As imagens podem ser enviadas pelo formulário e ficam na pasta `uploads`.
+Projeto Integrador 1 - UNIVESP - Grupo 21
 
 ## Como rodar
 
 1. Instale o Node.js.
-2. Abra a pasta do projeto no VS Code.
-3. No terminal, rode:
 
 ```bash
 npm install
 ```
-
-4. Copie o arquivo `.env.example` e renomeie a cópia para `.env`.
-5. Rode:
-
-```bash
-npm start
-```
-
-6. Abra no navegador:
-
-```text
 http://localhost:3000
-```
 
-## Login inicial
-
-No arquivo `.env.example`, deixei para estudo:
-
-```text
-ADMIN_USER=admin
-ADMIN_PASSWORD=1234
-```
-
-Depois de testar, troque a senha no `.env` antes de usar novamente.
 
 ## Estrutura das pastas
 
@@ -60,9 +26,9 @@ imobiliaria-backend/
 │   ├── admin.html             # Página de login e CRUD
 │   ├── app.js                 # JS da página pública
 │   └── admin.js               # JS do painel administrativo
-└── uploads/                   # Fotos enviadas pelo admin
+└── uploads/                   # Fotos enviadas 
 ```
 
-## Observação importante
+## Status do projeto
 
-Este é um projeto didático. Para colocar em produção de verdade, ainda seria importante configurar HTTPS, variáveis de ambiente em servidor real, validações mais fortes, proteção contra ataques comuns e um banco hospedado.
+Em desenvolvimento
