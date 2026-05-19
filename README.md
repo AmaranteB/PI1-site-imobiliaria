@@ -1,6 +1,7 @@
 # Imobiliária Novo Horizonte - versão final
 
 Projeto Integrador 1 - UNIVESP - Grupo 21
+Projeto de um site de imobiliária, com sistema de login, cadastro e exclusão de imagens e textos em forma de anúncio
 
 ## Como rodar
 
@@ -8,6 +9,11 @@ Projeto Integrador 1 - UNIVESP - Grupo 21
 
 ```bash
 npm install
+```
+2. Rode:
+
+```bash
+npm start
 ```
 http://localhost:3000
 
@@ -31,4 +37,4 @@ imobiliaria-backend/
 
 ## Status do projeto
 
-Em desenvolvimento
+Pronto, em constante aperfeiçoamento.
