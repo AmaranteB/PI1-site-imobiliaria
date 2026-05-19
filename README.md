@@ -37,4 +37,4 @@ imobiliaria-backend/
 
 ## Status do projeto
 
-Pronto, em constante aperfeiçoamento.
+Pronto
