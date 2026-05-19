@@ -34,6 +34,7 @@
                 <a href="#" class="hover:text-blue-600">Início</a>
                 <a href="#catalogo" class="hover:text-blue-600">Imóveis</a>
                 <a href="#sobre" class="hover:text-blue-600">Sobre</a>
+                <a href="#fale-conosco" class="hover:text-blue-600">Fale Conosco</a>
             </nav>
 
             <div class="flex gap-2">
@@ -120,10 +121,80 @@
 </section>
 <br>
 
+<!-- Seção fale conosco-->
+<section id="fale-conosco" class="max-w-7xl mx-auto px-4 py-12 bg-white rounded-xl shadow-md">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+        
+        <div>
+            <h2 class="text-3xl font-bold mb-6">Contatos</h2>
+            <p class="text-lg text-gray-700 mb-3">
+                <strong>E-mail:</strong> imobiliarianovohorizonte@email.com.br
+            </p>
+            <p class="text-lg text-gray-700">
+                <strong>Telefone:</strong> (xx) 99999-9999
+            </p>
+        </div>
+        <!-- formulário de anúncio. -->
+        <div class="bg-gray-50 rounded-2xl shadow-md p-6 border border-gray-100">
+            <h2 class="text-3xl font-bold mb-2">Anuncie aqui</h2>
+            <p class="text-gray-600 mb-6">Preencha os dados abaixo para cadastrar seu interesse em anunciar.</p>
+
+ 
+            <form action="mailto:imobiliarianovohorizonte@email.com.br" method="post" enctype="text/plain" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-bold mb-1">Nome</label>
+                    <input type="text" name="nome" placeholder="Digite seu nome" class="w-full p-3 border rounded-lg outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold mb-1">E-mail</label>
+                    <input type="email" name="email" placeholder="Digite seu e-mail" class="w-full p-3 border rounded-lg outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold mb-1">Telefone</label>
+                    <input type="tel" name="telefone" placeholder="Digite seu telefone" class="w-full p-3 border rounded-lg outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold mb-1">CRECI</label>
+                    <input type="text" name="creci" placeholder="Digite seu CRECI" class="w-full p-3 border rounded-lg outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold mb-1">Descreva seu imóvel</label>
+                    <textarea name="descricao_imovel" rows="5" placeholder="Informe localização, tamanho, quartos, vagas e outras características" class="w-full p-3 border rounded-lg outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                </div>
+
+
+                <div>
+                    <p class="block text-sm font-bold mb-2">Tipo de imóvel</p>
+                    <div class="flex flex-wrap gap-6">
+                        <label class="flex items-center gap-2 text-gray-700">
+                            <input type="checkbox" name="tipo_anuncio" value="Venda" class="w-4 h-4">
+                            Venda
+                        </label>
+                        <label class="flex items-center gap-2 text-gray-700">
+                            <input type="checkbox" name="tipo_anuncio" value="Locação" class="w-4 h-4">
+                            Locação
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg shadow-md transition">
+                    Enviar cadastro
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+<br>
 
     <!-- section roda pé -->
     <footer class="bg-gray-900 text-white py-12 text-center">
-        <p class="opacity-70">&copy; 2026 Imobiliária Novo Horizonte. Todos os direitos reservados.</p>
+        <p class="opacity-70">&copy; 2026 Imobiliária Novo Horizonte. Todos os direitos reservados.
+            <br>PI 1 - Grupo 21 - Univesp
+        </p>
     </footer>
 
 
